@@ -1,0 +1,43 @@
+.customers {
+    &__title {
+        padding-bottom: 40px;
+
+        h3 {
+            @include text(48px, interb, null, $black-cl, null);
+        }
+    }
+
+    &__slider {
+        @include mid(true);
+        column-gap: 20px;
+        &-item {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            border: 1px solid #e6e6e6;
+            padding: 32px;
+            border-radius: 20px;
+            .rating {
+                display: inline-flex;
+            }
+
+            .customers {
+                @include mid(true);
+                column-gap: 10px;
+                justify-content: flex-start;
+                .checked{
+                    display: inline-flex;
+                    @include size(24px);
+                    padding:2px;
+                    img{
+                        @include size(100%);
+                        object-fit: contain;
+                    }
+                }
+            }
+            .comment{
+                @include text(16px, sr, 1.38, $black-cl, null);
+            }
+        }
+    }
+}

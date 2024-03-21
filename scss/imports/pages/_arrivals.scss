@@ -1,0 +1,105 @@
+.arrivals {
+    padding-top: 72px;
+    &__box {
+        &-title {
+            padding-bottom: 55px;
+
+            h3 {
+                @include text(48px, interb, null, $black-cl, null);
+                text-align: center;
+            }
+        }
+
+        &-item {
+            @include mid(true);
+            justify-content: space-between;
+            column-gap: 20px;
+
+            .wrap-item {
+                display: flex;
+                flex-direction: column;
+                row-gap: 8px;
+
+                a {
+                    height: 330px;
+                }
+
+                .title {
+                    @include text(20px, sb, null, $black-cl, null);
+
+                }
+
+                .rating {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 13px;
+                    cursor: pointer;
+
+                    .point {
+                        display: inline-flex;
+                    }
+
+                    p {
+                        @include text(14px, sr, null, $black-cl, null);
+                    }
+                }
+
+                .price {
+                    @include text(24px, sb, null, $black-cl, null);
+                    display: flex;
+                    align-items: center;
+                    column-gap: 10px;
+
+                    .disc {
+                        color: $black-cl;
+                        text-decoration: line-through;
+                        opacity: 40%;
+                    }
+
+                    .percentdisc {
+                        @include text(12px, sm, null, #ff3333, null);
+                        padding: 3px 16px;
+                        position: relative;
+
+                        &::after {
+                            @include size(100%);
+                            position: absolute;
+                            content: "";
+                            border-radius: 62px;
+                            background-color: #ff3333;
+                            opacity: 10%;
+                            left: 0;
+                            top: 0;
+                        }
+                    }
+                }
+            }
+
+            .wrap-item:first-child {
+                a {
+                    .img {
+                        img {
+                            border-radius: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-button {
+            padding: 36px 0px 64px 0px;
+            @include mid(true);
+
+            a {
+                @include text(16px, sm, null, $black-cl, null);
+                @include size(218px, 52px);
+                display: inline-flex;
+                align-items: center;
+                padding: 16px 54px;
+                border: 1px solid #e6e6e6;
+                border-radius: 62px;
+                width: fit-content;
+            }
+        }
+    }
+}

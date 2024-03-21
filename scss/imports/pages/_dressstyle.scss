@@ -1,0 +1,36 @@
+.dressstyle {
+    .container {
+        background-color: $white-cl2;
+        border-radius: 40px;
+    }
+
+    &__title {
+        padding-top: 76px;
+        padding-bottom: 64px;
+        @include text(48px, interb, null, $black-cl, null);
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    &__item {
+        padding-bottom: 76px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        .group-item {
+            @include mid(true);
+            column-gap: 20px;
+        }
+
+        &-product {
+            width: max-content;
+
+            .img {
+                width: max-content;
+            }
+        }
+    }
+
+}

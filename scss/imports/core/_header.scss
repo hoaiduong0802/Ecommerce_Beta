@@ -1,1 +1,88 @@
 // css header
+.header {
+    height: var(--height-header);
+    display: flex;
+    align-items: center;
+    .container {
+        @include mid(true);
+        justify-content: space-between;
+        height: 48px;
+    }
+
+    &__logo {
+        @include mid(true);
+        height: 100%;
+        gap: 40px;
+        justify-content: center;
+
+        &-img {
+            height: 22px;
+
+            a {
+                img {
+                    height: 100%
+                }
+            }
+        }
+
+        &-navigation {
+            ul {
+                @include mid(true);
+                column-gap: 24px;
+
+                li {
+                    a {
+                        @include text(15px, sr, null, $black-cl, null);
+                    }
+                }
+            }
+        }
+
+    }
+
+    &__search {
+        flex: 1;
+        margin: 0px 24px;
+        @include mid(true);
+        position: relative;
+
+        i {
+            position: absolute;
+            left: 16px;
+            display: block;
+            @include size(24px);
+
+            img {
+                @include size(100%);
+            }
+        }
+
+        input {
+            outline: none;
+            border: none;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 12px;
+            border-radius: 62px;
+            padding: 12px 0px 15px 52px;
+            background-color: $white-cl2;
+            @include size(100%);
+        }
+
+    }
+
+    &__cta {
+        display: flex;
+        column-gap: 16px;
+
+        a {
+            display: block;
+            @include size(24px);
+
+            img {
+                @include size(100%);
+            }
+        }
+    }
+}

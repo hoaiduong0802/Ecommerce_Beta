@@ -1,0 +1,12 @@
+.brands{
+    background-color: $black-cl;
+    height: var(--height-brands);
+    .container{
+        height: 100%;
+    }
+    &__img{
+        height: 100%;
+        @include mid(true);
+        justify-content: space-between;
+    }
+}

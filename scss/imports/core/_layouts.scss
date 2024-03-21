@@ -38,6 +38,14 @@ body {
         margin-left: auto;
     }
 
+    section {
+        &.pd-section{
+            padding: var(--ptop) 0;
+        }
+        &.pd-bottom {
+            padding: 0 0 var(--pbottom) 0;
+          }
+    }
     @media (min-width: $xxs-min) {
         .container {
             max-width: 540px;

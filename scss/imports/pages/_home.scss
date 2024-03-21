@@ -1,8 +1,126 @@
-// CSS HOMEPAGE
-// Ví dụ
 .schero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: $gray-cl;
+    height: calc(100vh - (var(--height-header) + var(--height-brands)));
+    position: relative;
+    .container{
+        height: 100%;
+    }
+    &__content {
+        position: absolute;
+        width: 555px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        z-index: 100;
+        top: 50%;
+        transform: translateY(-60%);
+        &-title {   
+            h1 {
+                @include text(64px, interb, 1, $black-cl, null);
+
+            }
+        }
+
+        &-text {
+            p {
+                @include text(16px, sr, 1.38, $black-cl, null);
+            }
+        }
+
+        &-button {
+            @include mid(true);
+            justify-content: unset;
+
+            a {
+                @include mid(true);
+                @include size(210px, 52px);
+                @include text(16px, sm, null, $white-cl, null);
+                border-radius: 62px;
+                background-color: $black-cl;
+                padding: 16px 54px;
+            }
+        }
+
+        &-footer {
+            @include mid(true);
+            justify-content: space-between;
+
+            .blockContent {
+                height: 74px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+                position: relative;
+
+                &-title {
+                    height: 54px;
+                    display: flex;
+                    align-items: center;
+                    @include text(40px, sb, null, $black-cl, null);
+                }
+
+                &-text {
+                    @include text(16px, sr, null, $black-cl, null);
+                }
+
+                &:nth-child(2)::before {
+                    position: absolute;
+                    left: -15%;
+                    content: "";
+                    background-color: $black-cl;
+                    opacity: 10%;
+                    height: 74px;
+                    width: 2px;
+                }
+
+                &:nth-child(2)::after {
+                    position: absolute;
+                    right: -15%;
+                    content: "";
+                    background-color: $black-cl;
+                    opacity: 10%;
+                    height: 74px;
+                    width: 2px;
+                }
+
+            }
+        }
+    }
+
+    &__banner {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        &-img{
+            @include size(100%, 100%);
+            img{
+                object-fit: contain;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+        &-blink {
+            position: absolute;
+            top: 0;
+            right: 0;
+    
+            i {
+                display: block;
+                position: absolute;
+            }
+
+            i:first-child {
+                @include size(104px);
+                top: 86px;
+                right: 0px;
+            }
+
+            i:last-child {
+                @include size(52px);
+                top: 300px;
+                right: 550px;
+            }
+        }
+    }
 }

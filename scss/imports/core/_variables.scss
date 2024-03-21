@@ -1,7 +1,7 @@
 //======================================================BOXED LAYOUT=======================================================
 
 $container-max-width: 100%;
-$container-width: 1100px; // tùy thuộc vào container của bản thiết kế // $container-width = container (đo từ bản thiết kế) + 30px
+$container-width: 1240px; // tùy thuộc vào container của bản thiết kế // $container-width = container (đo từ bản thiết kế) + 30px
 
 /*GRID - media queries breakpoints*/
 $xxs-min: 576px; // CÓ THỂ TÙY CHỈNH
@@ -19,10 +19,13 @@ $lg-max: ($lg-min - 1); // Large Desktop
 //=====================================CÁC BIẾN KHÔNG THAY ĐỔI GIÁ TRỊ KHI RESPONSIVE======================================
 // colors - tuỳ chỉnh
 $white-cl: #fff;
+$gray-cl: #f2f0f1;
+$white-cl2:#f0f0f0;
 $black-cl: #000;
 $red-cl: #d81f1f;
 $blue-cl: #00afab;
 
+//
 $gradient-cl: linear-gradient(180deg, #df1cff 0%, #814bf6 50.55%, #00bcff 100%);
 
 // timing transition - tuỳ chỉnh
@@ -61,9 +64,10 @@ $cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
 
     --gap: 30px; // gap này sử dụng cho gap cột & padding của container, container-fluid
 
-    --height-header: 80px;
+    --height-header: 96px;
+    --height-brands: 122px;
     --height-button: 56px;
-    --ptop: 150px;
+    --ptop: 72px;
     --pd-section: 120px;
 
     @media (max-width: $sm-max) {
