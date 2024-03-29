@@ -1,1 +1,56 @@
 // css footer
+.footer{
+    padding-top: 50px;
+    background-color: #f0f0f0;
+    height: 500px;
+    .container{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        border-bottom: 1px solid lightgray;
+    }
+    &__logo{
+        width: 26%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        &-icon{
+            display: flex;
+            align-items: center;
+            column-gap: 12px;
+        }
+    }
+    &__component{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        &-item{
+            @include text(16px, sm, 1.19, $black-cl, null);
+            display: flex;
+            flex-direction: column;
+            row-gap: 26px;
+            .routeCta{
+                display: flex;
+                flex-direction: column;
+                row-gap: 22px;
+                a{
+                    @include text(16px, sr, 1.19, $black-cl, null);
+                }
+            }
+        }
+    }
+    hr{
+        height: 1px !important;
+        margin: unset;
+    }
+    &__bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #f0f0f0;
+        .container{
+            justify-content: space-between;
+        }
+    }
+}

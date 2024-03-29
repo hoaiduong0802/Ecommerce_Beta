@@ -1,15 +1,37 @@
 .customers {
+    margin-bottom: 100px;
     &__title {
         padding-bottom: 40px;
+        position: relative;
+        &-heading {
+            h3 {
+                @include text(48px, interb, null, $black-cl, null);
+            }
+        }
 
-        h3 {
-            @include text(48px, interb, null, $black-cl, null);
+        &-arrow{
+            position: absolute;
+            right: 0;
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            height: 24px;
+            i{
+                @include size(24px);
+                img{
+                    @include size (100%);
+                }
+            }
+            i:first-child{
+                rotate: 180deg;
+            }
         }
     }
 
     &__slider {
         @include mid(true);
         column-gap: 20px;
+
         &-item {
             display: flex;
             flex-direction: column;
@@ -17,6 +39,7 @@
             border: 1px solid #e6e6e6;
             padding: 32px;
             border-radius: 20px;
+
             .rating {
                 display: inline-flex;
             }
@@ -25,17 +48,20 @@
                 @include mid(true);
                 column-gap: 10px;
                 justify-content: flex-start;
-                .checked{
+
+                .checked {
                     display: inline-flex;
                     @include size(24px);
-                    padding:2px;
-                    img{
+                    padding: 2px;
+
+                    img {
                         @include size(100%);
                         object-fit: contain;
                     }
                 }
             }
-            .comment{
+
+            .comment {
                 @include text(16px, sr, 1.38, $black-cl, null);
             }
         }
