@@ -1,0 +1,55 @@
+.header {
+    margin-top: 62px;
+}
+
+.line-break-section {
+    width: 100%;
+
+    .container {
+        hr {
+            width: 100%;
+            color: black;
+            opacity: 0.1;
+        }
+    }
+}
+
+.breadcrums {
+    margin-bottom: 36px;
+
+    ul.breadcrumb {
+        display: flex;
+        align-items: center;
+
+        li {
+            a {
+                color: black;
+                opacity: 60%;
+                @include text(16px, sr, null, null, null);
+
+                span {
+                    display: inline-flex;
+                    @include size(16px);
+
+                    i {
+                        @include size(100%);
+                        text-align: center;
+                        align-content: center;
+                    }
+                }
+            }
+        }
+
+        li:nth-child(n+2) {
+            margin-left: 12px;
+        }
+
+        li.active {
+            a {
+                color: black;
+                opacity: 1;
+            }
+        }
+    }
+}
+

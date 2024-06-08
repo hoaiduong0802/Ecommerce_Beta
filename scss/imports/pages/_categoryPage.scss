@@ -1,0 +1,393 @@
+.header {
+    margin-top: 62px;
+}
+
+.line-break-section {
+    width: 100%;
+
+    .container {
+        hr {
+            width: 100%;
+            color: black;
+            opacity: 0.1;
+        }
+    }
+}
+
+.breadcrums {
+    margin-bottom: 36px;
+
+    ul.breadcrumb {
+        display: flex;
+        align-items: center;
+
+        li {
+            a {
+                color: black;
+                opacity: 60%;
+                @include text(16px, sr, null, null, null);
+
+                span {
+                    display: inline-flex;
+                    @include size(16px);
+
+                    i {
+                        @include size(100%);
+                        text-align: center;
+                        align-content: center;
+                    }
+                }
+            }
+        }
+
+        li:nth-child(n+2) {
+            margin-left: 12px;
+        }
+
+        li.active {
+            a {
+                color: black;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.mainCategory {
+
+    // Config for HR <hr /> tabs
+    hr {
+        color: rgba($color: $black-cl, $alpha: 0.1);
+        margin: 24px 0px;
+    }
+
+    // End Config
+    .container {
+        display: flex;
+        column-gap: 21px;
+    }
+
+    &__filter {
+        max-width: 300px;
+        height: max-content;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 20px 24px;
+        border-radius: 20px;
+        overflow: hidden;
+
+        // All component in mainCategory__filter
+        &>div {
+            .heading {
+                @include mid(true);
+                justify-content: space-between;
+
+                img {
+                    opacity: 0.4;
+                }
+            }
+
+            .wrapper-select {
+                .nameCategory {
+                    ul {
+                        @include mid(true);
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        row-gap: 20px;
+
+                        li {
+                            @include mid(true);
+                            width: 100%;
+                            justify-content: space-between;
+
+                            span {
+                                @include text(16px, sr, null, rgba(0, 0, 0, 0.6), null);
+                            }
+
+                            i {
+                                @include size(16px);
+                                align-content: center;
+                                color: rgba($color: $black-cl, $alpha: 0.4);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-priceTab {
+            .wrapper-select {}
+        }
+
+        &-colorTab {
+            .wrapper-select {
+                .nameCategory {
+                    display: grid;
+                    gap: 16px;
+                    grid-template-columns: repeat(5, 1fr);
+                    justify-items: center;
+
+                    span {
+                        @include size(37px);
+                        border-radius: 100%;
+                        border: 2px solid rgba($color: $black-cl, $alpha: 0.1);
+
+                        &.active {
+                            position: relative;
+
+                            &::after {
+                                position: absolute;
+                                font-family: "Font Awesome 5 Free";
+                                content: "\f00c";
+                                @include mid();
+                                color: $white-cl;
+                                display: inline-block;
+                                padding-right: 3px;
+                                vertical-align: middle;
+                                font-weight: 900;
+                            }
+                        }
+
+                        &:nth-child(1) {
+                            background-color: #00C12B;
+                        }
+
+                        &:nth-child(2) {
+                            background-color: #F50606;
+                        }
+
+                        &:nth-child(3) {
+                            background-color: #F5DD06;
+                        }
+
+                        &:nth-child(4) {
+                            background-color: #F57906;
+                        }
+
+                        &:nth-child(5) {
+                            background-color: #06CAF5;
+                        }
+
+                        &:nth-child(6) {
+                            background-color: #063AF5;
+                        }
+
+                        &:nth-child(7) {
+                            background-color: #7D06F5;
+                        }
+
+                        &:nth-child(8) {
+                            background-color: #F506A4;
+                        }
+
+                        &:nth-child(9) {
+                            background-color: #FFF;
+                        }
+
+                        &:nth-child(10) {
+                            background-color: #000;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-sizeTab {
+            .heading {
+                margin-bottom: 20px;
+            }
+
+            .wrapper-select {
+                .nameCategory {
+                    ul {
+                        display: flex;
+                        flex-direction: inherit !important;
+                        flex-wrap: wrap;
+                        gap: 8px !important;
+
+                        li {
+                            display: block !important;
+                            width: max-content !important;
+                            padding: 10px 20px;
+                            background-color: $white-cl2;
+                            border-radius: 62px;
+                            @include text(14px, sr, null, rgba(0, 0, 0, 0.6), null);
+
+                            &.active {
+                                background-color: $black-cl;
+                                @include text(14px, sm, null, $white-cl, null);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-dressTab {
+            margin-bottom: 24px;
+        }
+
+        &-submitBtn {
+            text-align: center;
+            padding: 16px 54px;
+            border-radius: 62px;
+            background-color: $black-cl;
+
+            button {
+                @include text(16px, sm, null, $white-cl, null);
+                border: none;
+                background-color: transparent;
+            }
+        }
+    }
+
+    &__showProduct {
+        flex: 1;
+
+        &-title {
+            margin-bottom: 16px;
+            @include mid(true);
+            justify-content: space-between;
+
+            h3 {
+                @include text(32px, sb, null, $black-cl, null);
+            }
+
+            .handle-show {
+                @include mid(true);
+                column-gap: 12px;
+
+                p,
+                label {
+                    @include text(16px, sr, null, rgba(0, 0, 0, 0.6), null);
+                }
+
+                select {
+                    border: none;
+                    outline: none;
+                    padding-right: 4px;
+                }
+            }
+        }
+
+        &-item {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 36px 20px;
+
+            .wrap-item {
+                display: flex;
+                flex-direction: column;
+                row-gap: 8px;
+
+                .img {
+                    max-width: 295px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .title {
+                    @include text(20px, sb, null, $black-cl, null);
+
+                }
+
+                .rating {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 13px;
+                    cursor: pointer;
+
+                    .point {
+                        display: inline-flex;
+                    }
+
+                    p {
+                        @include text(14px, sr, null, $black-cl, null);
+                    }
+                }
+
+                .price {
+                    @include text(24px, sb, null, $black-cl, null);
+                    display: flex;
+                    align-items: center;
+                    column-gap: 10px;
+
+                    .disc {
+                        color: $black-cl;
+                        text-decoration: line-through;
+                        opacity: 40%;
+                    }
+
+                    .percentdisc {
+                        @include text(12px, sm, null, #ff3333, null);
+                        padding: 3px 16px;
+                        position: relative;
+
+                        &::after {
+                            @include size(100%);
+                            position: absolute;
+                            content: "";
+                            border-radius: 62px;
+                            background-color: #ff3333;
+                            opacity: 10%;
+                            left: 0;
+                            top: 0;
+                        }
+                    }
+                }
+            }
+
+            .wrap-item:first-child {
+                a {
+                    .img {
+                        img {
+                            border-radius: 20px;
+                        }
+                    }
+                }
+            }
+
+            .handlePagination {
+                @include mid(true);
+                justify-content: space-between;
+                @include size(100%, 40px);
+                grid-column-start: 1;
+                grid-column-end: 4;
+
+                .pre,
+                .next {
+                    height: 100%;
+                    padding: 8px 14px;
+                    align-content: center;
+                    @include mid(true);
+                    column-gap: 8px;
+                    border: 1px solid rgba($color: #000000, $alpha: 0.1);
+                    border-radius: 8px;
+
+                    span {
+                        @include text(14px, sm, null, $black-cl, null);
+                    }
+                }
+
+                .pagination {
+                    span {
+                        @include text(14px, sm, null, rgba(0, 0, 0, 0.6), null);
+                        display: inline-block;
+                        @include size(40px);
+                        text-align: center;
+                        align-content: center;
+                        border-radius: 8px;
+
+                        &.active {
+                            font-family: sb;
+                            color: $black-cl;
+                            background-color: rgba($color: $black-cl, $alpha: 0.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
