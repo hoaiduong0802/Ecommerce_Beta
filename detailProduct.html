@@ -21,6 +21,15 @@
     <meta property="og:site_name" content="" />
     <meta property="og:image" content="" />
 
+    <!-- FONT AWESOME CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <link rel="stylesheet" href="dest/style.min.css" />
     <link rel="stylesheet" href="dest/fonts.css" />
   </head>
@@ -57,81 +66,139 @@
           <a href=""><img src="./img/icon/info.svg" alt="" /></a>
         </div>
       </div>
+      <div class="line-break-section">
+        <div class="container">
+          <hr />
+        </div>
+      </div>
     </header>
 
     <!-- MAIN -->
     <main class="mainwrapper">
       <!-- Example HTML -->
-      <section class="schero">
+      <section class="breadcrums">
         <div class="container">
-          <div class="schero__content">
-            <div class="schero__content-title">
-              <h1>FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+          <ul class="breadcrumb">
+            <li>
+              <a href="#"
+                >Home <span><i class="fa-solid fa-chevron-right"></i></span
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                >Shop <span><i class="fa-solid fa-chevron-right"></i></span
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                >Men <span><i class="fa-solid fa-chevron-right"></i></span
+              ></a>
+            </li>
+            <li class="active"><a href="#">T-shirts</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="product">
+        <div class="container">
+          <div class="product__description">
+            <div class="product__description-aside">
+              <figure>
+                <img src="./img/tshirt_demo_2.jpg" alt="" />
+              </figure>
+              <figure>
+                <img src="./img/tshirt_demo_2.jpg" alt="" />
+              </figure>
+              <figure>
+                <img src="./img/tshirt_demo_3.jpg" alt="" />
+              </figure>
             </div>
-            <div class="schero__content-text">
-              <p>
-                Browse through our diverse range of meticulously crafted
-                garments, designed to bring out your individuality and cater to
-                your sense of style.
-              </p>
-            </div>
-            <div class="schero__content-button">
-              <a href="#">Shop Now</a>
-            </div>
-            <div class="schero__content-footer">
-              <div class="blockContent">
-                <div class="blockContent-title">200+</div>
-                <div class="blockContent-text">International Brands</div>
-              </div>
-              <div class="blockContent">
-                <div class="blockContent-title">2,000+</div>
-                <div class="blockContent-text">High-Quality Products</div>
-              </div>
-              <div class="blockContent">
-                <div class="blockContent-title">30,000+</div>
-                <div class="blockContent-text">Happy Customers</div>
-              </div>
+            <div class="product__description-imgProduct">
+              <figure>
+                <img src="./img/tshirt_demo_big.jpg" alt="" />
+              </figure>
             </div>
           </div>
-
-          <div class="schero__banner">
-            <div class="schero__banner-img">
-              <img src="./img/herobanner.png" alt="" />
+          <div class="product__information">
+            <figcaption>
+              <div class="title">
+                <h3>One Life Graphic T-shirt</h3>
+              </div>
+              <div class="rating">
+                <div class="point">
+                  <img src="./img/icon/rating.svg" alt="" />
+                </div>
+                <p>4/5</p>
+              </div>
+              <div class="price">
+                <span class="undisc">240$</span>
+                <span class="disc">260$</span>
+                <span class="percentdisc">-20%</span>
+              </div>
+              <div class="description">
+                <p>
+                  This graphic t-shirt which is perfect for any occasion.
+                  Crafted from a soft and breathable fabric, it offers superior
+                  comfort and style.
+                </p>
+              </div>
+            </figcaption>
+            <hr />
+            <div class="product__information-pickColor">
+              <div class="title">
+                <p>Select Colors</p>
+              </div>
+              <div class="listColor">
+                <span class="active">
+                  <div class="blockActive">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </span>
+                <span class="">
+                  <div class="blockActive">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </span>
+                <span class="">
+                  <div class="blockActive">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </span>
+              </div>
             </div>
-            <div class="schero__banner-blink">
-              <i><img src="./img/icon/blink.svg" alt="" /></i>
-              <i><img src="./img/icon/blink.svg" alt="" /></i>
+            <hr />
+            <div class="product__information-sizeChosing">
+              <div class="title">
+                <p>Choose Size</p>
+              </div>
+              <div class="listSize">
+                <ul>
+                  <li>Small</li>
+                  <li>Medium</li>
+                  <li class="active">Large</li>
+                  <li>X-Large</li>
+                </ul>
+              </div>
+            </div>
+            <hr />
+            <div class="product__information-addcart">
+              <div class="available">
+                <button>-</button>
+                <span class="indexOfProduct">1</span>
+                <button>+</button>
+              </div>
+              <div class="ctaAddcart">
+                <button>Add to Cart</button>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="brands">
+      <section class="ratings_reviews mt-section">
         <div class="container">
-          <div class="brands__img">
-            <a href="">
-              <img src="./img/icon/brand_versace.svg" alt="" />
-            </a>
-            <a href="">
-              <img src="./img/icon/brand_zara.svg" alt="" />
-            </a>
-            <a href="">
-              <img src="./img/icon/brand_gucci.svg" alt="" />
-            </a>
-            <a href="">
-              <img src="./img/icon/brand_prada.svg" alt="" />
-            </a>
-            <a href="">
-              <img src="./img/icon/brand_calvinklein.svg" alt="" />
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="ratings_reviews">
-        <div class="container">
-          <div class="ratings_reviews__nav">
+          <div class="ratings_reviews__navigation">
             <ul>
               <li><a href="#">Product Details</a></li>
-              <li><a href="#">Rating & Reviews</a></li>
+              <li class="active"><a href="#">Rating & Reviews</a></li>
               <li><a href="#">FAQs</a></li>
             </ul>
           </div>
@@ -142,11 +209,19 @@
             </div>
             <div class="ratings_reviews__filter-bside">
               <ul>
-                <li><a href="#">|||</a></li>
+                <li>
+                  <a href="#"
+                    ><img src="./img/icon/icon_config.svg" alt=""
+                  /></a>
+                </li>
                 <li>
                   <select name="" id="">
-                    <option name="selectedCategory" value="Latest"></option>
-                    <option name="selectedCategory" value="New"></option>
+                    <option name="selectedCategory" value="Latest">
+                      Lastest
+                    </option>
+                    <option name="selectedCategory" value="Newest">
+                      Newest
+                    </option>
                   </select>
                 </li>
                 <li><a href="#">Write a Review</a></li>
@@ -159,6 +234,7 @@
               <div class="content-1">
                 <div class="rating">
                   <img src="./img/icon/rating.svg" alt="" />
+                  <img src="./img/icon/icon_threedots.svg" alt="" />
                 </div>
                 <div class="customers">
                   <span class="person">Sarah M.</span>
@@ -170,11 +246,15 @@
                   "I'm blown away by the quality and style of the clothes I
                   received from Shop.co. From casual wear to elegant dresses,
                   every piece I've bought has exceeded my expectations.”
+                </div>
+                <div class="postedAt">
+                  <p>Posted on August 16, 2023</p>
                 </div>
               </div>
               <div class="content-1">
                 <div class="rating">
                   <img src="./img/icon/rating.svg" alt="" />
+                  <img src="./img/icon/icon_threedots.svg" alt="" />
                 </div>
                 <div class="customers">
                   <span class="person">Sarah M.</span>
@@ -186,11 +266,15 @@
                   "I'm blown away by the quality and style of the clothes I
                   received from Shop.co. From casual wear to elegant dresses,
                   every piece I've bought has exceeded my expectations.”
+                </div>
+                <div class="postedAt">
+                  <p>Posted on August 16, 2023</p>
                 </div>
               </div>
               <div class="content-1">
                 <div class="rating">
                   <img src="./img/icon/rating.svg" alt="" />
+                  <img src="./img/icon/icon_threedots.svg" alt="" />
                 </div>
                 <div class="customers">
                   <span class="person">Sarah M.</span>
@@ -202,11 +286,15 @@
                   "I'm blown away by the quality and style of the clothes I
                   received from Shop.co. From casual wear to elegant dresses,
                   every piece I've bought has exceeded my expectations.”
+                </div>
+                <div class="postedAt">
+                  <p>Posted on August 16, 2023</p>
                 </div>
               </div>
               <div class="content-1">
                 <div class="rating">
                   <img src="./img/icon/rating.svg" alt="" />
+                  <img src="./img/icon/icon_threedots.svg" alt="" />
                 </div>
                 <div class="customers">
                   <span class="person">Sarah M.</span>
@@ -218,11 +306,15 @@
                   "I'm blown away by the quality and style of the clothes I
                   received from Shop.co. From casual wear to elegant dresses,
                   every piece I've bought has exceeded my expectations.”
+                </div>
+                <div class="postedAt">
+                  <p>Posted on August 16, 2023</p>
                 </div>
               </div>
               <div class="content-1">
                 <div class="rating">
                   <img src="./img/icon/rating.svg" alt="" />
+                  <img src="./img/icon/icon_threedots.svg" alt="" />
                 </div>
                 <div class="customers">
                   <span class="person">Sarah M.</span>
@@ -234,11 +326,15 @@
                   "I'm blown away by the quality and style of the clothes I
                   received from Shop.co. From casual wear to elegant dresses,
                   every piece I've bought has exceeded my expectations.”
+                </div>
+                <div class="postedAt">
+                  <p>Posted on August 16, 2023</p>
                 </div>
               </div>
               <div class="content-1">
                 <div class="rating">
                   <img src="./img/icon/rating.svg" alt="" />
+                  <img src="./img/icon/icon_threedots.svg" alt="" />
                 </div>
                 <div class="customers">
                   <span class="person">Sarah M.</span>
@@ -250,17 +346,19 @@
                   "I'm blown away by the quality and style of the clothes I
                   received from Shop.co. From casual wear to elegant dresses,
                   every piece I've bought has exceeded my expectations.”
+                </div>
+                <div class="postedAt">
+                  <p>Posted on August 16, 2023</p>
                 </div>
               </div>
             </div>
             <div class="ratings_reviews__content-FAQs"></div>
           </div>
-          <div class="ratings__reviews-button">
+          <div class="ratings_reviews__button">
             <a href="#">Load More Reviews</a>
           </div>
         </div>
       </section>
-      <hr class="container" style="color: #e6e6e6" />
       <section class="topselling pd-section" style="margin-bottom: 80px">
         <div class="container">
           <div class="arrivals__box">
