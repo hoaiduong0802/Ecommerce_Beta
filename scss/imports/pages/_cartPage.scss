@@ -53,3 +53,218 @@
     }
 }
 
+.cart {
+    &__title {
+        margin-bottom: 34px;
+
+        h3.title {
+            @include text(40px, interb, null, $black-cl, null);
+        }
+    }
+
+    &__product {
+        display: flex;
+        column-gap: 20px;
+
+        &-list {
+            max-width: 715px;
+            width: 100%;
+            padding: 20px 24px;
+            border-radius: 20px;
+            border: 1px dashed rgba($color: #000000, $alpha: 0.1);
+
+            hr {
+                margin: 24px 0px;
+            }
+
+            .wrap-item {
+                display: flex;
+                column-gap: 16px;
+                max-height: 125px;
+
+                .img {
+                    @include size(124px);
+
+                }
+
+                .product-info {
+                    @include mid(true);
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    p {
+                        &.title {
+                            @include text(20px, sb, null, $black-cl, null);
+                            white-space: nowrap;
+                            flex: 1;
+                        }
+
+                        &:nth-child(3) {
+                            margin-bottom: 15px;
+                        }
+
+                        &:last-child {
+                            @include text(24px, sb, null, $black-cl, null);
+                        }
+
+                        span {
+                            color: rgba($color: $black-cl, $alpha: 0.6);
+                        }
+
+                    }
+
+                }
+
+                .crud {
+                    flex: 1;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    flex-direction: column;
+
+                    button {
+                        @include size(24px);
+                        text-align: center;
+                        padding: unset;
+                        border: none;
+                        background-color: transparent;
+
+                        i {
+                            @include size(100%);
+                            align-content: center;
+                            color: #FF3333;
+                        }
+                    }
+
+                    .available {
+                        background-color: rgba($color: $black-cl, $alpha: 0.1);
+                        padding: 12px 20px;
+                        border-radius: 62px;
+
+                        button {
+                            @include size(20px);
+                        }
+
+                        span {
+                            @include text(14px, sm, null, $black-cl, null);
+                            padding: 0px 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-checkout {
+            flex: 1;
+            border: 1px dashed rgba($color: $black-cl, $alpha: 0.1);
+            border-radius: 20px;
+            height: max-content;
+            padding: 20px 24px;
+
+            hr {
+                margin: 24px 0px;
+                background-color: rgba($color: $black-cl, $alpha: 0.1)
+            }
+
+            p {
+                &.title {
+                    @include text(24px, sb, null, $black-cl, null);
+                }
+            }
+
+            .payment {
+                padding-top: 24px;
+
+                p {
+                    @include text(20px, sr, null, rgba(0, 0, 0, 0.6), null);
+                    @include mid(true);
+                    column-gap: 8px;
+                    justify-content: space-between;
+
+                    &:nth-child(2) {
+                        span {
+                            &:first-child {
+                                flex: 1;
+                                color: rgba($color: $black-cl, $alpha: 0.6);
+                            }
+
+                            &:last-child {
+                                color: #FF3333;
+                            }
+                        }
+                    }
+
+                    span {
+                        font-family: sb;
+                        color: $black-cl;
+                    }
+                }
+            }
+
+            .total {
+                p {
+                    @include text(20px, sr, null, $black-cl, null);
+                    display: flex;
+                    justify-content: space-between;
+
+                    span {
+                        @include text(24px, sb, null, $black-cl, null);
+                    }
+                }
+            }
+
+            .promotion {
+                margin: 24px 0px;
+                display: flex;
+                justify-content: space-between;
+                column-gap: 12px;
+
+                .wrapper {
+                    padding: 12px 0px 12px 16px;
+                    flex-direction: inherit;
+                    background-color: rgba($color: $black-cl, $alpha: 0.1);
+                    width: max-content;
+                    border-radius: 62px;
+
+                    i {
+                        @include size(24px);
+                        align-content: center;
+                        text-align: center;
+                        color: rgba($color: $black-cl, $alpha: 0.4);
+                        margin-right: 12px;
+                    }
+
+                    input {
+                        border: none;
+                        outline: none;
+                        background-color: transparent;
+                        color: rgba($color: $black-cl, $alpha: 0.4);
+                    }
+                }
+
+                button {
+                    flex: 1;
+                    background-color: $black-cl;
+                    border: none;
+                    color: $white-cl;
+                    padding: 12px 16px;
+                    border-radius: 62px;
+                }
+            }
+
+            .ctaCheckout {
+                background-color: $black-cl;
+                border-radius: 62px;
+
+                a {
+                    display: inline-block;
+                    width: 100%;
+                    text-align: center;
+                    align-content: center;
+                    @include text(16px, sm, null, $white-cl, null);
+                    padding: 19px 0px;
+                }
+            }
+        }
+    }
+}
